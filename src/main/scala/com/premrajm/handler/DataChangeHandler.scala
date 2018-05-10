@@ -1,11 +1,11 @@
 package com.premrajm.handler
 
-import com.premrajm.model.{Criteria, DataChange}
+import com.premrajm.model.{DataChange, Operation}
 
 
 trait DataChangeHandler {
 
-  def matchingCriteria: Criteria
+  def matchingCriteria: Operation
 
   def handle(dataChange: DataChange): Unit
 }
