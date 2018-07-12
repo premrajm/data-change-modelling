@@ -21,7 +21,7 @@ class DataChangeService(handlers: List[DataChangeHandler]) {
   }
 }
 
-object Test extends App{
+object Test extends App {
   val ser = new DataChangeService(List())
   ser.process(DataChange(List(
     Table("abc", Operation("abc", OperationType.Update), LocalDateTime.now()),
