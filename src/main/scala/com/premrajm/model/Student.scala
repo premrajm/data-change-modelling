@@ -22,7 +22,7 @@ object Test extends App {
 
   val attributes = student.attributes
     .filter(_.field.isPresent)
-    .map(a => a.name -> a.field.get)
+    .map(a => a.name -> a.field.value)
     .toMap
 
   println(attributes)
